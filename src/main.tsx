@@ -5,7 +5,7 @@ import "./index.css";
 
 const submitContactThroughNetlify = (event: SubmitEvent) => {
   const form = event.target;
-  if (!(form instanceof HTMLFormElement) || form.name !== "contact" || form.hidden) return;
+  if (!(form instanceof HTMLFormElement) || form.getAttribute("name") !== "contact" || form.hidden) return;
 
   event.preventDefault();
   event.stopImmediatePropagation();
