@@ -1,0 +1,8 @@
+MISE A JOUR MATAVAI STUDIO
+
+1. Copiez tout le contenu de ce dossier dans la racine de votre ancien projet Vite.
+2. Acceptez le remplacement des fichiers existants.
+3. Ne supprimez pas votre dossier .git.
+4. Dans GitHub Desktop : Commit to main, puis Push origin.
+
+Les anciens fichiers média non référencés peuvent rester : ils ne seront plus affichés.

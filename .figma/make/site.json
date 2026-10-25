@@ -1,0 +1,11 @@
+{
+  "title": "Matavai Studio",
+  "description": "Showcases a senior communication professional's portfolio with elegant typography, interactive project displays, and seamless navigation for client engagement.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
