@@ -7,13 +7,14 @@ METHODE RECOMMANDEE — GITHUB DESKTOP
 1. Ouvrez GitHub Desktop et clonez cecilekoessler/matavai-studio.com si nécessaire.
 2. Dans GitHub Desktop, choisissez Repository > Show in Explorer/Finder.
 3. Extrayez le contenu de cette archive dans le dossier du dépôt.
-4. Acceptez le remplacement des quatre fichiers existants.
+4. Acceptez le remplacement des fichiers existants.
 5. Vérifiez que GitHub Desktop affiche exactement :
    - index.html modifié
    - src/App.tsx modifié
    - src/index.css modifié
    - src/main.tsx modifié
-   - trois nouveaux fichiers public/projects/28-matavai-studio-*
+   - trois fichiers public/projects/28-matavai-studio-*
+   - cinq nouveaux motifs public/motifs/why-01.svg à why-05.svg
 6. Utilisez le message : Publish latest Matavai Studio updates
 7. Cliquez sur Commit to main, puis Push origin.
 8. Dans Netlify, attendez la fin du déploiement déclenché automatiquement.

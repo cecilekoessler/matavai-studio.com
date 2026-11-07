@@ -1374,14 +1374,16 @@ mark {
 }
 .why-list article {
   display: grid;
-  grid-template-columns: 48px 1fr 1fr;
+  grid-template-columns: 56px 1fr 1fr;
+  align-items: center;
   gap: 18px;
   padding: 19px 0;
   border-bottom: 1px solid var(--line);
 }
-.why-list span {
-  color: var(--ocean);
-  font-size: 10px;
+.why-motif {
+  display: block;
+  width: 44px;
+  height: 44px;
 }
 .why-list h3 {
   margin: 0;
@@ -2882,7 +2884,7 @@ footer a:hover {
   }
 
   .why-list article {
-    grid-template-columns: 35px 1fr;
+    grid-template-columns: 52px 1fr;
   }
   .why-list p {
     grid-column: 2;

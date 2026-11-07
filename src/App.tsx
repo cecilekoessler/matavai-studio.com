@@ -2573,10 +2573,6 @@ export default function App() {
           </div>
           <div className="why-list">
             {[
-              [
-                'Une seule interlocutrice.',
-                'Du brief à la livraison, vous parlez à celle qui fait.',
-              ],
               ['Je parle imprimeur.', 'Dix-huit ans d’édition\u00a0: papier, BAT, fabrication.'],
               [
                 'Je parle développeur.',
@@ -2588,12 +2584,17 @@ export default function App() {
                 'Ancienne journaliste, je sais ce qu’une rédaction lit jusqu’au bout.',
               ],
               [
-                'Je sais m’entourer.',
-                'Pour les projets d’envergure, je constitue une équipe sur mesure : photographe, développeur, rédacteur. Toujours au bon niveau.',
+                'Plusieurs talents, une seule voix',
+                'Une équipe à géométrie variable selon les projets et l’urgence. Mais dans tous les cas, un seul interlocuteur : moi.',
               ],
             ].map(([title, text], index) => (
               <article key={title}>
-                <span aria-hidden="true">0{index + 1}</span>
+                <img
+                  className="why-motif"
+                  src={`/motifs/why-0${index + 1}.svg`}
+                  alt=""
+                  aria-hidden="true"
+                />
                 <h3>{title}</h3>
                 <p>{text}</p>
               </article>
