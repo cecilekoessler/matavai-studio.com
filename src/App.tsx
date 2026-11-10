@@ -95,6 +95,31 @@ const projects: Project[] = [
     tone: '#101010',
   },
   {
+    id: '29',
+    name: 'Aéroport de Tahiti',
+    discipline: 'Signalétique aéroportuaire',
+    filter: 'Signalétique & packaging',
+    categoryLabel: 'Signalétique',
+    deliverables: 'Charte iconographique, pictogrammes & déploiement spatial',
+    request:
+      'Concevoir un système d’orientation immédiatement compréhensible dans un environnement dense, multiculturel et soumis à de fortes contraintes de circulation.',
+    response:
+      'Une signalétique structurée par les flux, avec un code couleur clair, des pictogrammes lisibles à distance et un ancrage polynésien pensé pour l’accueil des voyageurs.',
+    previewImage: '/projects/29-aeroport-tahiti-charte-signaletique.jpg',
+    images: [
+      '/projects/29-aeroport-tahiti-charte-signaletique.jpg',
+      '/projects/29-aeroport-tahiti-carte-destinations.jpg',
+      '/projects/29-aeroport-tahiti-plan-parking.jpg',
+    ],
+    documents: [
+      {
+        label: 'Présentation de la signalétique aéroportuaire',
+        href: '/docs/29-aeroport-tahiti-signaletique.pdf',
+      },
+    ],
+    tone: '#dceef3',
+  },
+  {
     id: '01',
     name: 'Sites web',
     discipline: 'Identité, conception & réalisation web',
@@ -859,7 +884,7 @@ const services = [
 ]
 
 const testimonials: { quote: string; name: string; company: string }[] = []
-const featuredProjectIds = ['28', '01', '27', '18', '12', '05', '03', '19', '21', '23', '26']
+const featuredProjectIds = ['28', '29', '01', '27', '18', '12', '05', '03', '19', '21', '23', '26']
 const featuredProjects = featuredProjectIds
   .map((id) => projects.find((project) => project.id === id))
   .filter(Boolean) as Project[]
@@ -872,6 +897,7 @@ const projectVisuals = (project: Project) =>
     ]),
   )
 const pdfPreviewSources: Record<string, { directory: string; pages: number }> = {
+  '/docs/29-aeroport-tahiti-signaletique.pdf': { directory: 'aeroport-tahiti', pages: 3 },
   '/docs/20-pew-design-eng.pdf': { directory: 'pew-en', pages: 9 },
   '/docs/20-pew-design-fr.pdf': { directory: 'pew-fr', pages: 9 },
   '/docs/20-pew-maquette-2023.pdf': { directory: 'pew-maquette', pages: 5 },
@@ -900,6 +926,12 @@ function imageAlt(image: string, projectName: string) {
       'Page d’accueil Aura Estate & Care présentée sur un ordinateur dans un espace de travail lumineux',
     '/projects/26-audit-facebook-mockup.jpg':
       'Couverture d’un audit de communication présentée sur un support de travail avec un ordinateur',
+    '/projects/29-aeroport-tahiti-charte-signaletique.jpg':
+      'Charte de signalétique de l’Aéroport de Tahiti présentée sur un bureau',
+    '/projects/29-aeroport-tahiti-carte-destinations.jpg':
+      'Carte des destinations internationales au départ et à l’arrivée de Tahiti-Faa’a',
+    '/projects/29-aeroport-tahiti-plan-parking.jpg':
+      'Plan illustré des accès et parkings de l’Aéroport de Tahiti-Faa’a',
     '/projects/22-encart-01.jpg': 'Flyers Tahiti Reva Dreams présentés sur un comptoir',
     '/projects/05-hyper-u-halloween.png':
       'Couverture orange du catalogue promotionnel Hyper U Tahiti spécial Halloween',
