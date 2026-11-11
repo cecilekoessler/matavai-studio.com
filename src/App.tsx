@@ -11,6 +11,7 @@ type Filter =
   | 'Sites web'
   | 'Audit de communication'
   | 'Signalétique & packaging'
+  | 'Presse & relations médias'
 
 type WebsiteCase = {
   name: string
@@ -34,6 +35,13 @@ type BrandStory = {
   question: string
 }
 
+type ProjectDocument = {
+  label: string
+  href: string
+  cover?: string
+  pages?: number
+}
+
 type Project = {
   id: string
   name: string
@@ -54,7 +62,7 @@ type Project = {
   publications?: { src: string; title: string; cover: string; alt: string; note?: string }[]
   websiteCases?: WebsiteCase[]
   website?: { rebuild: string; current: string }
-  documents?: { label: string; href: string }[]
+  documents?: ProjectDocument[]
   url?: string
   urlLabel?: string
   secondaryUrl?: string
@@ -391,6 +399,70 @@ const projects: Project[] = [
       },
     ],
     tone: '#e7d7e0',
+  },
+  {
+    id: '30',
+    name: 'Catalogues commerciaux',
+    discipline: 'Direction artistique, mise en page & grande distribution',
+    filter: 'Édition & print',
+    categoryLabel: 'Grande distribution',
+    deliverables: 'Catalogues, portfolios commerciaux & déclinaisons',
+    request:
+      'Réunir des campagnes conçues pour de grandes marques dans des présentations commerciales claires, rythmées et faciles à parcourir.',
+    response:
+      'Deux catalogues interactifs qui structurent les réalisations par univers — beauté, maison et services — tout en laissant une large place aux visuels de campagne.',
+    previewImage: '/projects/05-grande-distribution-animation.gif',
+    publications: [
+      {
+        src: '/flipbooks/maison-services/index.html',
+        title: 'Maison & services · Grande distribution',
+        cover: '/projects/05-maison-services-cover.jpg',
+        alt: 'Couverture du portfolio Maison et services pour la grande distribution',
+        note: 'Portfolio · 10 pages',
+      },
+      {
+        src: '/flipbooks/beaute-grande-distribution/index.html',
+        title: 'Beauté · Grande distribution',
+        cover: '/projects/05-beaute-grande-distribution-cover.jpg',
+        alt: 'Couverture du portfolio Beauté pour la grande distribution',
+        note: 'Portfolio · 15 pages',
+      },
+    ],
+    tone: '#eee6e1',
+  },
+  {
+    id: '32',
+    name: 'Communiqués de presse',
+    discipline: 'Angle éditorial, rédaction & mise en page',
+    filter: 'Presse & relations médias',
+    categoryLabel: 'Relations presse',
+    deliverables: 'Angle, rédaction, iconographie & diffusion',
+    request:
+      'Transformer des actualités institutionnelles et associatives en informations structurées, immédiatement exploitables par les rédactions.',
+    response:
+      'Trois communiqués documentés qui associent hiérarchie éditoriale, citations, chiffres clés et iconographie afin de faciliter la lecture et la reprise médiatique.',
+    previewImage: '/projects/32-communique-lanternes-cover.jpg',
+    documents: [
+      {
+        label: 'Ville de Papeete · Les Lanternes de la rue Colette',
+        href: '/docs/32-communique-lanternes-rue-colette.pdf',
+        cover: '/projects/32-communique-lanternes-cover.jpg',
+        pages: 5,
+      },
+      {
+        label: 'École de Voile d’Arue · Les 25 ans de la Saga Tahiti',
+        href: '/docs/32-communique-saga-tahiti-25-ans.pdf',
+        cover: '/projects/32-communique-saga-cover.jpg',
+        pages: 3,
+      },
+      {
+        label: 'Ministère de la Santé · Veille sanitaire et grippe aviaire',
+        href: '/docs/32-communique-veille-sanitaire-grippe-aviaire.pdf',
+        cover: '/projects/32-communique-veille-sanitaire-cover.jpg',
+        pages: 2,
+      },
+    ],
+    tone: '#f0e7dc',
   },
   {
     id: '08',
@@ -822,6 +894,38 @@ const projects: Project[] = [
     ],
     tone: '#dbe7de',
   },
+  {
+    id: '33',
+    name: 'Packaging',
+    discipline: 'Étuis, étiquettes & objets de marque',
+    filter: 'Signalétique & packaging',
+    categoryLabel: 'Design packaging',
+    deliverables: 'Concept, design de volume, étiquetage & déclinaisons',
+    request:
+      'Donner une présence singulière à deux produits polynésiens, du geste floral nomade à l’univers précieux d’un vin élevé au cœur du Pacifique.',
+    response:
+      'Deux territoires de marque conçus jusque dans leurs supports : un étui pratique et identifiable pour les bouquets tropicaux d’Artisan Fleuriste Papeete, puis une identité complète mêlant étiquettes, bouteille, coffrets et éléments de dégustation pour Vin de Tahiti.',
+    previewImage: '/projects/33-packaging-artisan-fleuriste.png',
+    images: [
+      '/projects/33-packaging-artisan-fleuriste.png',
+      '/projects/33-packaging-vin-de-tahiti.png',
+    ],
+    visualGroups: [
+      {
+        name: 'Artisan Fleuriste Papeete',
+        description:
+          'Conception d’un étui nomade pour transporter et offrir les bouquets tropicaux, avec un graphisme végétal immédiatement reconnaissable.',
+        images: ['/projects/33-packaging-artisan-fleuriste.png'],
+      },
+      {
+        name: 'Vin de Tahiti · Blanc de Corail',
+        description:
+          'Création de l’identité packaging, de l’étiquetage et des déclinaisons de coffrets pour traduire un vin rare né sous les latitudes polynésiennes.',
+        images: ['/projects/33-packaging-vin-de-tahiti.png'],
+      },
+    ],
+    tone: '#e8e1d4',
+  },
 ]
 
 const services = [
@@ -884,7 +988,23 @@ const services = [
 ]
 
 const testimonials: { quote: string; name: string; company: string }[] = []
-const featuredProjectIds = ['28', '29', '01', '27', '18', '12', '05', '03', '19', '21', '23', '26']
+const featuredProjectIds = [
+  '28',
+  '29',
+  '01',
+  '30',
+  '32',
+  '33',
+  '27',
+  '18',
+  '12',
+  '05',
+  '03',
+  '19',
+  '21',
+  '23',
+  '26',
+]
 const featuredProjects = featuredProjectIds
   .map((id) => projects.find((project) => project.id === id))
   .filter(Boolean) as Project[]
@@ -892,11 +1012,24 @@ const projectVisuals = (project: Project) =>
   Array.from(
     new Set([
       ...(project.brandStory ? [project.brandStory.poster] : []),
+      ...(project.documents?.flatMap((document) => (document.cover ? [document.cover] : [])) || []),
       ...(project.publications?.map((publication) => publication.cover) || []),
       ...(project.images || []),
     ]),
   )
 const pdfPreviewSources: Record<string, { directory: string; pages: number }> = {
+  '/docs/32-communique-lanternes-rue-colette.pdf': {
+    directory: 'communique-lanternes-papeete',
+    pages: 5,
+  },
+  '/docs/32-communique-saga-tahiti-25-ans.pdf': {
+    directory: 'communique-saga-tahiti',
+    pages: 3,
+  },
+  '/docs/32-communique-veille-sanitaire-grippe-aviaire.pdf': {
+    directory: 'communique-veille-sanitaire',
+    pages: 2,
+  },
   '/docs/29-aeroport-tahiti-signaletique.pdf': { directory: 'aeroport-tahiti', pages: 3 },
   '/docs/20-pew-design-eng.pdf': { directory: 'pew-en', pages: 9 },
   '/docs/20-pew-design-fr.pdf': { directory: 'pew-fr', pages: 9 },
@@ -932,11 +1065,23 @@ function imageAlt(image: string, projectName: string) {
       'Carte des destinations internationales au départ et à l’arrivée de Tahiti-Faa’a',
     '/projects/29-aeroport-tahiti-plan-parking.jpg':
       'Plan illustré des accès et parkings de l’Aéroport de Tahiti-Faa’a',
+    '/projects/32-communique-lanternes-cover.jpg':
+      'Première page du communiqué de presse de la Ville de Papeete sur les Lanternes de la rue Colette',
+    '/projects/32-communique-saga-cover.jpg':
+      'Première page du communiqué de presse sur les 25 ans de la Saga Tahiti',
+    '/projects/32-communique-veille-sanitaire-cover.jpg':
+      'Première page du communiqué du Ministère de la Santé sur la veille sanitaire face à la grippe aviaire',
     '/projects/22-encart-01.jpg': 'Flyers Tahiti Reva Dreams présentés sur un comptoir',
     '/projects/05-hyper-u-halloween.png':
       'Couverture orange du catalogue promotionnel Hyper U Tahiti spécial Halloween',
     '/projects/05-cartes-visite-kinesiologie.png':
       'Recto et verso des cartes de visite d’une kinésiologue',
+    '/projects/05-grande-distribution-animation.gif':
+      'Produits de grande distribution animés pour présenter la sélection de supports promotionnels',
+    '/projects/05-maison-services-cover.jpg':
+      'Couverture du portfolio Maison et services pour la grande distribution',
+    '/projects/05-beaute-grande-distribution-cover.jpg':
+      'Couverture du portfolio Beauté pour la grande distribution',
     '/projects/05-flyer-kinesiologie-francais.png':
       'Flyer recto verso en français présentant les bienfaits de la kinésiologie',
     '/projects/05-flyer-kinesiologie-espagnol.png':
@@ -1410,7 +1555,7 @@ function ProjectPanel({
   onContact: () => void
 }) {
   const [lightbox, setLightbox] = useState<number | null>(null)
-  const [pdfPreview, setPdfPreview] = useState<{ label: string; href: string } | null>(null)
+  const [pdfPreview, setPdfPreview] = useState<ProjectDocument | null>(null)
   const [pdfPage, setPdfPage] = useState(0)
   const [activePublication, setActivePublication] = useState<number | null>(null)
   const [websiteView, setWebsiteView] = useState<'rebuild' | 'current'>('rebuild')
@@ -1423,7 +1568,7 @@ function ProjectPanel({
     lightbox !== null && project.images ? detailedImage(project.images[lightbox]) : null
   const pdfSource = pdfPreview ? pdfPreviewSources[pdfPreview.href] : null
   const openLightbox = (index: number) => setLightbox(index)
-  const openPdf = (document: { label: string; href: string }) => {
+  const openPdf = (document: ProjectDocument) => {
     setPdfPage(0)
     setPdfPreview(document)
   }
@@ -1536,7 +1681,7 @@ function ProjectPanel({
             {project.deliverables || project.filter}
           </p>
         </div>
-        {project.documents?.[0] && pdfPreviewSources[project.documents[0].href] && (
+        {project.documents?.length === 1 && pdfPreviewSources[project.documents[0].href] && (
           <button
             className="quick-document"
             type="button"
@@ -1786,7 +1931,7 @@ function ProjectPanel({
         !project.websiteCases &&
         !project.editionGroups &&
         !project.visualGroups &&
-        (project.images || (!project.publications && !project.website)) && (
+        (project.images || (!project.publications && !project.website && !project.documents)) && (
           <div className={`case-gallery${project.galleryFocus ? ' is-focused' : ''}`}>
             {project.images?.map((image, index) => (
               <button
@@ -1849,7 +1994,11 @@ function ProjectPanel({
         </div>
       )}
       {project.documents && (
-        <div className="case-documents">
+        <div
+          className={`case-documents${
+            project.documents.some((document) => document.cover) ? ' has-covers' : ''
+          }`}
+        >
           {project.documents.map((document) => (
             <button
               key={document.href}
@@ -1858,8 +2007,23 @@ function ProjectPanel({
                 if (pdfPreviewSources[document.href]) openPdf(document)
               }}
             >
-              {document.label}
-              <span>Voir le PDF ↗</span>
+              {document.cover ? (
+                <>
+                  <span className="case-document-cover">
+                    <img src={document.cover} alt="" loading="lazy" decoding="async" />
+                    {document.pages && <i>{document.pages} pages</i>}
+                  </span>
+                  <span className="case-document-copy">
+                    <strong>{document.label}</strong>
+                    <small>Consulter le document complet →</small>
+                  </span>
+                </>
+              ) : (
+                <>
+                  {document.label}
+                  <span>Voir le PDF ↗</span>
+                </>
+              )}
             </button>
           ))}
         </div>
@@ -2897,7 +3061,9 @@ export default function App() {
                   ? 'Identité'
                   : selectedFilter === 'Signalétique & packaging'
                     ? 'Autre'
-                    : selectedFilter,
+                    : selectedFilter === 'Presse & relations médias'
+                      ? 'Communication'
+                      : selectedFilter,
             )
             setProjectIndex(null)
             window.setTimeout(

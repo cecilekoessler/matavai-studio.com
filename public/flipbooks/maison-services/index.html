@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Maison &amp; services · Grande distribution</title>
+    <link rel="stylesheet" href="/flipbooks/portfolio.css" />
+    <style>
+      :root {
+        --bg: #f0ece4;
+        --ink: #1f2826;
+        --muted: #6f7873;
+        --accent: #bf588d;
+        --shadow: rgba(31, 40, 38, 0.22);
+      }
+    </style>
+  </head>
+  <body
+    data-pages="10"
+    data-directory="/docs/previews/maison-services"
+    data-page-width="1404"
+    data-page-height="992"
+  >
+    <div class="stage">
+      <div id="book"></div>
+      <p class="hint" id="hint">Cliquez ou faites glisser le coin des pages</p>
+    </div>
+    <div class="bar" aria-label="Navigation du document">
+      <button id="first" type="button" aria-label="Couverture" title="Couverture">⇤</button>
+      <button id="prev" type="button" aria-label="Page précédente" title="Page précédente">
+        ←
+      </button>
+      <span class="count" id="count">1 / 10</span>
+      <button id="next" type="button" aria-label="Page suivante" title="Page suivante">→</button>
+      <button id="last" type="button" aria-label="Dernière page" title="Dernière page">⇥</button>
+    </div>
+    <p class="credit">Maison &amp; services · Grande distribution · Matavai Studio</p>
+    <script src="/flipbooks/vaa/page-flip.browser.js"></script>
+    <script src="/flipbooks/portfolio.js"></script>
+  </body>
+</html>

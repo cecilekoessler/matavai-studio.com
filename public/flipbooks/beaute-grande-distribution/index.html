@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Beauté · Grande distribution</title>
+    <link rel="stylesheet" href="/flipbooks/portfolio.css" />
+    <style>
+      :root {
+        --bg: #f4eef1;
+        --ink: #232128;
+        --muted: #746c76;
+        --accent: #bf588d;
+        --shadow: rgba(35, 33, 40, 0.22);
+      }
+    </style>
+  </head>
+  <body
+    data-pages="15"
+    data-directory="/docs/previews/beaute-grande-distribution"
+    data-page-width="1404"
+    data-page-height="992"
+  >
+    <div class="stage">
+      <div id="book"></div>
+      <p class="hint" id="hint">Cliquez ou faites glisser le coin des pages</p>
+    </div>
+    <div class="bar" aria-label="Navigation du document">
+      <button id="first" type="button" aria-label="Couverture" title="Couverture">⇤</button>
+      <button id="prev" type="button" aria-label="Page précédente" title="Page précédente">
+        ←
+      </button>
+      <span class="count" id="count">1 / 15</span>
+      <button id="next" type="button" aria-label="Page suivante" title="Page suivante">→</button>
+      <button id="last" type="button" aria-label="Dernière page" title="Dernière page">⇥</button>
+    </div>
+    <p class="credit">Beauté · Grande distribution · Matavai Studio</p>
+    <script src="/flipbooks/vaa/page-flip.browser.js"></script>
+    <script src="/flipbooks/portfolio.js"></script>
+  </body>
+</html>
